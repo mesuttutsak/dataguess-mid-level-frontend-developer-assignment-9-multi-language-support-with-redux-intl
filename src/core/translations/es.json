@@ -1,3 +1,7 @@
 {
-  "welcome": "Bienvenido"
+  "welcome": "Bienvenido",
+  "about": {
+    "title": "Soluciones Visión por Computador Todo en Uno.",
+    "desc": "Realice fácilmente sus operaciones de control de calidad, seguimiento, recuento y clasificación en producción con las soluciones de IA de Dataguess."
+  }
 }

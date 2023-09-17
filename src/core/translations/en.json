@@ -1,3 +1,7 @@
 {
-  "welcome": "Welcome"
+  "welcome": "welcome",
+  "about": {
+    "title": "All-In-One Computer Vision Solutions",
+    "desc": "Easily Perform Your Quality Control, Tracking, Counting and Classification Operations in Production with Dataguess AI Solutions."
+  }
 }

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './reset.scss';
+@import './fonts.scss';
+@import './variables.scss';
+@import "./mixins.scss";
+
+* {
+    @apply box-border;
+    font-family: $fontFamily;
+}
+
+body {
+    @apply h-screen w-screen;
+    #root {
+        @apply h-full w-full flex flex-col;
+    }
+    background: #F7FAFC;
+    font-family: $fontFamily;
+}
+
+header {
+    @apply bg-white p-5 border border-gray-200;
+}
+
+main {
+    @apply flex flex-1 mt-6 w-screen;
+}
+
+._container {
+    @apply container mx-auto px-3;
+    max-width: 1024px;
+}

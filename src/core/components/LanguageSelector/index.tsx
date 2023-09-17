@@ -1,20 +1,19 @@
-// src/components/LanguageSelector.tsx
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+import { AppState } from '../../store/reducer';
+import { useLanguageChange } from '../../hooks/useLanguageChange';
 
 function LanguageSelector() {
-  const dispatch = useDispatch();
-
-  const handleChangeLanguage = (lang: string) => {
-    dispatch({type: 'setLang', payload : lang});
-    
-  };
+  const { localeLang, browserLang } = useSelector((state: AppState) => state)
+  const location = useLocation();
+  const pathname = location.pathname;
+  const handleChangeLanguage = useLanguageChange();
 
   return (
     <div>
-      <button onClick={() => handleChangeLanguage('en')}>English</button>
-      <button onClick={() => handleChangeLanguage('es')}>Español</button>
-      <button onClick={() => handleChangeLanguage('tr')}>Türkçe</button>
+      <button onClick={() => handleChangeLanguage('en', pathname, browserLang, localeLang)}>English</button>
+      <button onClick={() => handleChangeLanguage('es', pathname, browserLang, localeLang)}>Español</button>
+      <button onClick={() => handleChangeLanguage('tr', pathname, browserLang, localeLang)}>Türkçe</button>
     </div>
   );
 }

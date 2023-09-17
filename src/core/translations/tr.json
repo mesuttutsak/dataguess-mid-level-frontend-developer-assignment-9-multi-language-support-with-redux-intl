@@ -1,3 +1,7 @@
 {
-  "welcome": "Hoşgeldin."
+  "welcome": "Hoşgeldin.",
+  "about": {
+    "title": "All-In-One Computer Vision Çözümleri",
+    "desc": "Üretimdeki Kalite Kontrol, Takip, Sayma ve Sınıflandırma İşlemlerinizi Dataguess'in Yapay Zeka Çözümleri ile Kolayca Yapın."
+  }
 }

@@ -1,15 +1,20 @@
 export type AppState = {
-  lang: string;
+  localeLang: string;
+  browserLang: string;
 };
 
 const initialState : AppState = {
-  lang: 'en',
+  localeLang: '',
+  browserLang: '',
 };
 
 export const reducer = (state : AppState = initialState, action:any) => {
   switch (action.type) {
-    case "setLang": {
-      return { ...state, lang: action.payload };
+    case "setLocaleLang": {
+      return { ...state, localeLang: action.payload };
+    }
+    case "setBrowserLang": {
+      return { ...state, browserLang: action.payload };
     }
     default:
       return state;
