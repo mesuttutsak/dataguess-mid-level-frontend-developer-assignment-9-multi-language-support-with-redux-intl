@@ -7,7 +7,9 @@ const Page404 = () => {
 
     useLayoutEffect(() => {
       const timer = setTimeout(() => {
-        navigate('/');
+        navigate('/', {
+          replace: true,
+        });
       }, 2000);
   
       return () => clearTimeout(timer);
