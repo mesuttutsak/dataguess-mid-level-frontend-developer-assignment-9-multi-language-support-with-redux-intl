@@ -15,7 +15,7 @@ const ListFormatted = ({ list }: { list: any[] }) => {
 
             </div>
             <div className={styles.intFormatRowSettings}>
-                <div>
+                <div className={styles.row}>
                     <Text fontSize='sm' fontWeight='medium'>List text input: </Text>
                     <input name='list_input' placeholder='exp: Kiraz,Armut,Karpuz' defaultValue={list.join(',')} type='text' onChange={(e: any) => setListVal(e.target.value)} />
                 </div>

@@ -21,13 +21,15 @@ function NumberFormatted({ value, style }: NumberFormattedProps) {
                 />
             </div>
             <div className={styles.intFormatRowSettings}>
-                <div><Text fontSize='sm' fontWeight='medium'>Value: </Text> <input name='value_input' defaultValue={value} type='number' onChange={(e: any) => setValue(e.target.value)} /></div>
-                <div className='flex flex-col'>
+                <div className={styles.row}>
+                    <Text fontSize='sm' fontWeight='medium'>Value: </Text> <input name='value_input' defaultValue={value} type='number' onChange={(e: any) => setValue(e.target.value)} />
+                </div>
+                <div className={styles.radioLyt}>
                     <Text fontSize='sm' fontWeight='bold'>Style: </Text>
                     <ul>
-                        <li><label><input type='radio' name='style_input' value={'currency'} onChange={((e: any) => setStyleVal(e.target.value))}  /> currency</label></li>
+                        <li><label><input type='radio' name='style_input' value={'currency'} onChange={((e: any) => setStyleVal(e.target.value))} /> currency</label></li>
                         <li><label><input type='radio' name='style_input' value={'unit'} onChange={((e: any) => setStyleVal(e.target.value))} /> unit</label></li>
-                        <li><label><input type='radio' name='style_input' value={'decimal'} onChange={((e: any) => setStyleVal(e.target.value))} defaultChecked={true}/> decimal</label></li>
+                        <li><label><input type='radio' name='style_input' value={'decimal'} onChange={((e: any) => setStyleVal(e.target.value))} defaultChecked={true} /> decimal</label></li>
                         <li><label><input type='radio' name='style_input' value={'percent'} onChange={((e: any) => setStyleVal(e.target.value))} /> percent</label></li>
                     </ul>
                 </div>

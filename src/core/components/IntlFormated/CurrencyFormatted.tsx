@@ -27,10 +27,16 @@ function CurrencyFormatted({ amount, currency, style }: CurrencyFormattedProps) 
                     currency={currencyVal ? currencyVal : currency}
                 />
             </div>
+
             <div className={styles.intFormatRowSettings}>
-                <div><Text fontSize='sm' fontWeight='medium'>Amount: </Text> <input name='value_input' defaultValue={amount} type='number' onChange={(e: any) => setValue(e.target.value)} /></div>
-                <div><Text fontSize='sm' fontWeight='medium'>Currency: </Text> <input name='currencu_input' defaultValue={currency} type='text' onChange={(e: any) => setCurrencyVal(e.target.value)} /></div>
-                <div className='flex flex-col'>
+
+                <div className={styles.row}>
+                    <Text fontSize='sm' fontWeight='medium'>Amount: </Text> <input name='value_input' defaultValue={amount} type='number' onChange={(e: any) => setValue(e.target.value)} />
+                </div>
+                <div className={styles.row}>
+                    <Text fontSize='sm' fontWeight='medium'>Currency: </Text> <input name='currencu_input' defaultValue={currency} type='text' onChange={(e: any) => setCurrencyVal(e.target.value)} />
+                </div>
+                <div className={styles.radioLyt}>
                     <Text fontSize='sm' fontWeight='bold'>Style: </Text>
                     <ul>
                         <li><label><input type='radio' name='style_input' value={'currency'} onChange={((e:any) => setStyleVal(e.target.value ) )} defaultChecked={true} /> currency</label></li>

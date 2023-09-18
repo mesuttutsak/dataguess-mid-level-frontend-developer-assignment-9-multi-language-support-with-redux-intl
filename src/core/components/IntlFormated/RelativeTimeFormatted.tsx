@@ -6,7 +6,7 @@ import Text from '../Text';
 
 interface RelativeTimeFormattedProps {
     date?: number
-    unit?:  "hour" | "minute" | "second"
+    unit?: "hour" | "minute" | "second"
 }
 function RelativeTimeFormatted({ date = 5, unit = 'second' }: RelativeTimeFormattedProps) {
     const [unitVal, setUnitVal] = useState<"hour" | "minute" | "second">();
@@ -24,12 +24,15 @@ function RelativeTimeFormatted({ date = 5, unit = 'second' }: RelativeTimeFormat
                 />
             </div>
             <div className={styles.intFormatRowSettings}>
-                <div className='flex flex-col'>
-                    <div><Text fontSize='sm' fontWeight='medium'>Count: </Text> <input name='updTime_input' defaultValue={1} type='number' onChange={(e: any) => setUpdTime(e.target.value)} /></div>
-                    <div>
-                        <Text fontSize='sm' fontWeight='medium'>Date:</Text>
-                        <input name='date_input' type='date' onChange={(e: any) => setDateVal(e.target.value)} />
-                    </div>
+                <div className={styles.row}>
+                    <Text fontSize='sm' fontWeight='medium'>Count: </Text> <input name='updTime_input' defaultValue={1} type='number' onChange={(e: any) => setUpdTime(e.target.value)} />
+                </div>
+                <div className={styles.row}>
+                    <Text fontSize='sm' fontWeight='medium'>Date:</Text>
+                    <input name='date_input' type='date' onChange={(e: any) => setDateVal(e.target.value)} />
+                </div>
+
+                <div className={styles.radioLyt}>
                     <Text fontSize='sm' fontWeight='bold'>Unit: </Text>
                     <ul>
                         <li><label><input type='radio' name='RelativeTime_input' value={'hour'} onChange={((e: any) => setUnitVal(e.target.value))} /> hour</label></li>
