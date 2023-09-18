@@ -14,9 +14,11 @@
 
 body {
     @apply h-screen w-screen;
+
     #root {
         @apply h-full w-full flex flex-col;
     }
+
     background: #F7FAFC;
     font-family: $fontFamily;
 }
@@ -32,4 +34,16 @@ main {
 ._container {
     @apply container mx-auto px-3;
     max-width: 1024px;
+}
+
+.list {
+    @apply flex flex-col gap-2;
+}
+
+input[type=text],input[type=number],input[type=date] {
+    @apply outline rounded-sm text-sm leading-3 pl-2 p-1 bg-gray-50 border-gray-300 w-40;
+
+    &:active {
+        @apply border-gray-600;
+    }
 }

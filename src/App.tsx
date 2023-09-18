@@ -21,7 +21,6 @@ function ValidatedRoute({ element }: { element: JSX.Element }) {
 
   useEffect(() => {
     if (lang && validLanguages.includes(lang) && (lang !== browserLang)) {
-      console.log(lang, browserLang);
       dispatch({ type: 'setLocaleLang', payload: lang });
     }
   }, [])

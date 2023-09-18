@@ -4,8 +4,6 @@ import { Link, NavLink, useLocation, useParams } from "react-router-dom";
 import styles from "./header.module.scss";
 import { useSelector } from "react-redux";
 import { AppState } from "../../store/reducer";
-import { renderClasses } from "../../utils/renderClasses";
-import { useEffect } from "react";
 
 const Header = () => {
     const { localeLang, browserLang } = useSelector((state: AppState) => state)
@@ -15,7 +13,6 @@ const Header = () => {
     function isActivePage(isPath: string) {
         let active = true;
         const pathArr = pathname.split('/').filter((item: string) => item !== "");
-        console.log(pathArr);
         if ((isPath === 'home') && ((pathArr[0] === localeLang && pathArr.length === 1) || pathArr.length === 0)) {
             return active;
         } else if ((isPath === 'about') && (pathArr[1] === isPath || pathArr[0] === isPath)) {

@@ -1,3 +1,11 @@
 .intFormatRow {
-    @apply flex flex-row gap-3;
+    @apply flex flex-col gap-3 p-3 border-gray-700 border-b-2;
+
+    &Headline{
+        @apply flex flex-row gap-3;
+    }
+
+    &Settings {
+        @apply flex flex-col gap-3
+    }
 }
